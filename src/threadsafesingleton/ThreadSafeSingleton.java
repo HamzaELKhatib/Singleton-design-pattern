@@ -1,4 +1,4 @@
-package com.coffeepoweredcrew.singleton.src;
+package com.coffeepoweredcrew.singleton.src.threadsafesingleton;
 
 /**
  * This class demonstrates singleton pattern using Double Checked Locking or "classic" singleton.
@@ -7,19 +7,17 @@ package com.coffeepoweredcrew.singleton.src;
  * and double check locking, the volatile keyword is guaranteed to work only after JVMs starting with
  * version 1.5 and later.
  */
-public class LazyRegistryWithDCL {
+public class ThreadSafeSingleton {
 
-    private LazyRegistryWithDCL() {
-    	
-    }
+    private ThreadSafeSingleton() {}
     
-    private static volatile LazyRegistryWithDCL INSTANCE;
+    private static volatile ThreadSafeSingleton INSTANCE;
     
-    public static LazyRegistryWithDCL getInstance() {
+    public static ThreadSafeSingleton getInstance() {
     	if(INSTANCE == null) {
-    		synchronized (LazyRegistryWithDCL.class) {
+    		synchronized (ThreadSafeSingleton.class) {
 				if(INSTANCE == null) {
-					INSTANCE = new LazyRegistryWithDCL();				
+					INSTANCE = new ThreadSafeSingleton();
 				}
 			}
     	}
