@@ -1,15 +1,17 @@
-# Singleton-design-pattern
+# Singleton design pattern
 
-
-![](img/Screenshot.png)
-
-
-## This pattern is used to:
 
 * Ensure a class has only one instance, and provide a global point of access to it.
 
 
-* The singleton pattern is used in other design patterns like Abstract Factory, Builder, Prototype, Facade etc.
+* Singleton Design Pattern is considered an anti pattern in many cases.
+  It is used when we want to restrict the instantiation of a class to one object.
+  This is useful when exactly one object is needed to coordinate actions across the system.
+  For example, a single database object is used to provide controlled access to a shared resource.
+  Such usage is rare, but does have its place.
+
+
+![](img/Screenshot.png)
 
 
 ## The singleton pattern has a few variations, but all of them share the following common concepts:
@@ -46,4 +48,8 @@
 
 
 * Enum singleton
+
+
+
+
 
