@@ -50,6 +50,9 @@
 * Enum singleton
 
 
+* and others...
+
+
 
 
 
